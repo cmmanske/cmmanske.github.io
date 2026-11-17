@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release Notes – Tandem 4.2 | Writing sample by Candacé Manske</title>
+<style>
+  :root { --ink:#1c2430; --muted:#5b6573; --accent:#0f5c63; --soft:#e6f1f1; --line:#d9dfe5; --warn:#8a5a00; --warnbg:#fff6e0; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.6; font-size:16px; }
+  .banner { background:#f4f5f7; border-bottom:1px solid var(--line); font-size:.85rem; color:var(--muted); padding:8px 0; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+  .banner a { color:var(--accent); }
+  .cover { background:var(--accent); color:#fff; padding:48px 0 40px; }
+  .cover h1 { margin:0; font-size:2.2rem; }
+  .cover p { margin:6px 0 0; opacity:.9; }
+  h2 { font-size:1.05rem; letter-spacing:1px; text-transform:uppercase; color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:6px; margin:48px 0 8px; }
+  h3 { font-size:1.15rem; margin:36px 0 12px; }
+  h4 { font-size:.95rem; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin:20px 0 6px; }
+  .toc { background:#f8fafa; border:1px solid var(--line); border-radius:6px; padding:16px 22px; margin-top:28px; }
+  .toc ol { margin:6px 0 0; padding-left:20px; }
+  .toc li { margin:3px 0; }
+  .toc a { color:var(--ink); text-decoration:none; }
+  .toc a:hover { color:var(--accent); text-decoration:underline; }
+  table.meta { border-collapse:collapse; width:100%; margin:4px 0 14px; font-size:.92rem; }
+  table.meta th { text-align:left; width:38%; background:var(--soft); padding:7px 12px; border:1px solid var(--line); font-weight:600; text-transform:uppercase; font-size:.8rem; letter-spacing:.4px; }
+  table.meta td { padding:7px 12px; border:1px solid var(--line); }
+  .callout { border-left:4px solid var(--accent); background:var(--soft); padding:10px 16px; margin:14px 0; border-radius:0 4px 4px 0; }
+  .callout.important { border-color:var(--warn); background:var(--warnbg); }
+  .callout b { display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.5px; margin-bottom:2px; }
+  .feature { border-bottom:1px solid var(--line); padding-bottom:18px; }
+  ol.steps li, ul li { margin-bottom:4px; }
+  code, .ui { font-family:inherit; font-weight:600; }
+  .path { font-family:Consolas,Menlo,monospace; font-size:.88rem; background:#f2f4f6; padding:1px 6px; border-radius:3px; }
+  table.fixes { border-collapse:collapse; width:100%; font-size:.92rem; }
+  table.fixes th, table.fixes td { border:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top; }
+  table.fixes th { background:var(--soft); }
+  footer { margin:56px 0 0; padding:20px 0 40px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+
+<div class="banner"><div class="wrap">Writing sample by Candacé Manske. Tandem is a fictional product; the format follows the release notes I wrote for an enterprise SaaS platform. <a href="../index.html">← Back to portfolio</a></div></div>
+
+<div class="cover"><div class="wrap">
+  <h1>Release Notes – Tandem 4.2</h1>
+  <p>Partner relationship management platform · Released 12 November 2026</p>
+</div></div>
+
+<main class="wrap">
+
+<nav class="toc" aria-label="Contents">
+  <strong>Contents</strong>
+  <ol>
+    <li><a href="#advance">Advance notice: Single sign-on becomes mandatory for partner users</a></li>
+    <li><a href="#deals">Partner Portal: Duplicate deal detection at registration</a></li>
+    <li><a href="#onboarding">Partner Portal: Configurable onboarding checklists</a></li>
+    <li><a href="#directory">Partner Portal: Filter the partner directory by tier and region</a></li>
+    <li><a href="#statements">Commissions: Downloadable payout statements</a></li>
+    <li><a href="#profile">Platform: Profile completeness indicator</a></li>
+    <li><a href="#audit">Admin Console: Export the audit log</a></li>
+    <li><a href="#fixes">Tandem 4.1 SP1: Fixed issues</a></li>
+  </ol>
+</nav>
+
+<h2 id="advance">Advance notice</h2>
+<div class="feature">
+  <h3>[SECURITY] Single sign-on becomes mandatory for partner users</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>Partner users · Partner managers · Administrators</td></tr>
+    <tr><th>Activation required?</th><td>Yes, before 1 March 2027</td></tr>
+    <tr><th>Admin Console</th><td><span class="path">Admin Console › Security › Authentication</span></td></tr>
+    <tr><th>Effective date</th><td>Tandem 4.4 (1 March 2027)</td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>From Tandem 4.4, partner users will no longer be able to sign in with an email address and password. They will sign in through single sign-on (SSO) with their own company's identity provider, or with a one-time sign-in link sent by email. This reduces the risk of shared and reused passwords on accounts that can see your deal and commission data.</p>
+  <h4>What will happen?</h4>
+  <ul>
+    <li><b>Now to 28 February 2027:</b> nothing changes for partner users. Administrators can turn on SSO early and test it with a pilot group.</li>
+    <li><b>From 1 March 2027:</b> password sign-in is removed for partner users. Partners without SSO receive a one-time sign-in link each time they sign in from a new device.</li>
+  </ul>
+  <div class="callout important"><b>Important</b>Partner users who still sign in with a password on 1 March 2027 will be asked to verify their email address at their next sign-in. Tell your partners in advance to avoid calls to your support team.</div>
+  <h4>What do you need to do?</h4>
+  <ol class="steps">
+    <li>Go to <span class="path">Admin Console › Security › Authentication</span>.</li>
+    <li>Under <span class="ui">Partner sign-in</span>, select <span class="ui">Configure SSO</span> and enter your identity provider details.</li>
+    <li>Select a pilot group of partners and choose <span class="ui">Enable for selected partners</span>.</li>
+    <li>When the pilot is successful, choose <span class="ui">Enable for all partners</span>.</li>
+  </ol>
+</div>
+
+<h2>Partner Portal</h2>
+
+<div class="feature" id="deals">
+  <h3>[DEAL REGISTRATION] Duplicate deal detection at registration</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>Partner users · Channel managers</td></tr>
+    <tr><th>Activation required?</th><td>No, on by default</td></tr>
+    <tr><th>Admin Console</th><td><span class="path">Admin Console › Deals › Registration rules</span> (to adjust matching)</td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>When two partners register the same opportunity, channel managers spend time resolving the conflict, and one partner is often disappointed. Tandem now checks for possible duplicates while the partner is completing the deal registration form, before the deal is submitted.</p>
+  <h4>How does it work?</h4>
+  <p>When a partner enters the customer's company name and domain, Tandem compares them with open deals registered in the last 90 days. If it finds a possible match, a message appears below the <span class="ui">Customer</span> field:</p>
+  <div class="callout"><b>Message shown to the partner</b>“A deal for this customer may already be registered. You can still submit this registration. Your channel manager will review it.”</div>
+  <p>The partner can still submit. The registration then appears in the channel manager's <span class="ui">Deal review</span> queue with a <span class="ui">Possible duplicate</span> label and a link to the matching deal. The partner never sees the other partner's name or deal details.</p>
+  <div class="callout"><b>Note</b>Administrators can change the matching period (30, 60, 90 or 180 days) or turn off domain matching in <span class="path">Admin Console › Deals › Registration rules</span>.</div>
+</div>
+
+<div class="feature" id="onboarding">
+  <h3>[ONBOARDING] Configurable onboarding checklists</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>Partner managers · New partner users</td></tr>
+    <tr><th>Activation required?</th><td>Yes, create at least one checklist</td></tr>
+    <tr><th>Admin Console</th><td><span class="path">Admin Console › Onboarding › Checklists</span></td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>Partner managers can now build onboarding checklists for each partner tier, so new partners know exactly what to do in their first weeks: sign the agreement, complete training, add team members, register a first deal. New partner users see their checklist on the portal home page until every item is complete.</p>
+  <h4>How do I create a checklist?</h4>
+  <ol class="steps">
+    <li>Go to <span class="path">Admin Console › Onboarding › Checklists</span> and select <span class="ui">New checklist</span>.</li>
+    <li>Choose the partner tiers the checklist applies to.</li>
+    <li>Add items. Each item can link to a page in the portal, a training course or an external URL.</li>
+    <li>Mark items that Tandem can complete automatically (for example, <span class="ui">Register your first deal</span>).</li>
+    <li>Select <span class="ui">Publish</span>.</li>
+  </ol>
+  <p>Partner managers can follow each partner's progress in the <span class="ui">Onboarding</span> column of the partner list.</p>
+  <div class="callout"><b>Note</b>Publishing a checklist does not affect partners who joined before the publication date, unless you select <span class="ui">Also assign to existing partners</span>.</div>
+</div>
+
+<div class="feature" id="directory">
+  <h3>[PARTNER DIRECTORY] Filter the partner directory by tier and region</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>Channel managers · Sales teams</td></tr>
+    <tr><th>Activation required?</th><td>No</td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>The partner directory now has <span class="ui">Tier</span> and <span class="ui">Region</span> filters, so sales teams can quickly find a certified partner to bring into a deal. Filters can be combined, and the selected filters are kept in the page URL so they can be shared with colleagues.</p>
+</div>
+
+<h2>Commissions</h2>
+
+<div class="feature" id="statements">
+  <h3>[PAYOUTS] Downloadable payout statements</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>Partner finance contacts · Finance administrators</td></tr>
+    <tr><th>Activation required?</th><td>No</td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>Partners often need a document for their own accounting when they receive a commission payment. Each payout now has a statement that partners can download as a PDF from <span class="ui">Commissions › Payouts</span>.</p>
+  <h4>What is in the statement?</h4>
+  <ul>
+    <li>Payout reference, payment date and currency</li>
+    <li>Each deal included, with the deal value, commission rate and commission amount</li>
+    <li>Adjustments (for example, clawbacks on cancelled deals), each with a reason</li>
+    <li>Total paid</li>
+  </ul>
+  <div class="callout"><b>Note</b>Statements are available for payouts made from 1 January 2026. Statements are generated in the partner's payout currency.</div>
+</div>
+
+<h2>Platform</h2>
+
+<div class="feature" id="profile">
+  <h3>[USER PROFILE] Profile completeness indicator</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>All users</td></tr>
+    <tr><th>Activation required?</th><td>No</td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>Incomplete profiles cause problems later: payouts fail without bank details, and channel managers cannot reach partners without a phone number. A completeness indicator now appears at the top of the profile page and lists the missing information. Each item links directly to the section where it can be added.</p>
+  <p>For more information, see the Help Center article <a href="help-update-profile.html">Update your profile</a>.</p>
+</div>
+
+<div class="feature" id="audit">
+  <h3>[ADMIN CONSOLE] Export the audit log</h3>
+  <table class="meta">
+    <tr><th>Made for</th><td>Administrators</td></tr>
+    <tr><th>Activation required?</th><td>No</td></tr>
+    <tr><th>Admin Console</th><td><span class="path">Admin Console › Security › Audit log</span></td></tr>
+  </table>
+  <h4>Synopsis</h4>
+  <p>Administrators can now export the audit log as a CSV file for a selected date range (up to 12 months). This makes it easier to answer security questionnaires and to keep a record outside Tandem.</p>
+  <div class="callout important"><b>Important</b>The export contains user names and email addresses. Store it in line with your company's data protection policy.</div>
+</div>
+
+<h2 id="fixes">Product update: Tandem 4.1 SP1</h2>
+<p>The following issues, reported after Tandem 4.1, have been fixed.</p>
+<table class="fixes">
+  <tr><th>Area</th><th>Issue</th><th>Resolution</th></tr>
+  <tr><td>Deal registration</td><td>Dates on the registration form were displayed in US format for all users.</td><td>Dates now follow the format set in the user's profile preferences.</td></tr>
+  <tr><td>Commissions</td><td>Commission totals were rounded incorrectly for currencies with no decimal places (for example, JPY).</td><td>Totals are now rounded according to the currency's rules.</td></tr>
+  <tr><td>Notifications</td><td>Some partner users received the weekly summary email twice.</td><td>Duplicate sending has been fixed.</td></tr>
+</table>
+
+<footer>
+  Tandem is a fictional product created for this writing sample. Written by Candacé Manske ·
+  <a href="mailto:cml.manske@gmail.com">cml.manske@gmail.com</a> · <a href="../index.html">Back to portfolio</a>
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referral intake and routing – LibaMed internal guide | Writing sample by Candacé Manske</title>
+<style>
+  :root { --navy:#002F4D; --blue:#1470AF; --gold:#D4A847; --ink:#1c2430; --muted:#5b6573; --line:#d9dfe5; --soft:#eaf2f8; --stop:#9b1c1c; --stopbg:#fdecec; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Calibri,"Segoe UI",system-ui,Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.6; font-size:17px; }
+  .banner { background:#f4f5f7; border-bottom:1px solid var(--line); font-size:.85rem; color:var(--muted); padding:8px 0; }
+  .banner a { color:var(--blue); }
+  .wrap { max-width:860px; margin:0 auto; padding:0 24px; }
+  .cover { background:var(--navy); color:#fff; padding:40px 0 32px; border-bottom:5px solid var(--gold); }
+  .cover .label { color:var(--gold); font-size:.85rem; letter-spacing:1.5px; text-transform:uppercase; font-weight:700; }
+  h1, h2, h3 { font-family:Cambria,Georgia,"Times New Roman",serif; }
+  .cover h1 { margin:6px 0 4px; font-size:2.1rem; }
+  .cover p { margin:0; opacity:.85; }
+  table { border-collapse:collapse; width:100%; font-size:.94rem; margin:12px 0; }
+  th, td { border:1px solid var(--line); padding:8px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); color:var(--navy); }
+  table.control th { width:30%; }
+  h2 { color:var(--navy); font-size:1.45rem; margin:40px 0 10px; border-bottom:2px solid var(--gold); padding-bottom:4px; }
+  h3 { color:var(--blue); font-size:1.15rem; margin:28px 0 8px; }
+  .step { display:flex; gap:16px; margin:26px 0; }
+  .num { flex:0 0 38px; height:38px; border-radius:50%; background:var(--navy); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:1.05rem; }
+  .step > div:not(.num) { flex:1; }
+  .step h3 { margin-top:4px; }
+  .box { border-left:4px solid var(--blue); background:var(--soft); padding:10px 16px; margin:14px 0; border-radius:0 4px 4px 0; }
+  .box.stop { border-color:var(--stop); background:var(--stopbg); }
+  .box b { display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.5px; margin-bottom:2px; }
+  ul li, ol li { margin-bottom:5px; }
+  .check { list-style:none; padding-left:0; }
+  .check li::before { content:"☐ "; color:var(--blue); font-weight:700; }
+  footer { margin:56px 0 0; padding:20px 0 40px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }
+  footer a { color:var(--blue); }
+</style>
+</head>
+<body>
+
+<div class="banner"><div class="wrap">Writing sample by Candacé Manske. An internal operations guide written for LibaMed Ltd, the UK digital health company I founded; partner details removed. <a href="../index.html">← Back to portfolio</a></div></div>
+
+<div class="cover"><div class="wrap">
+  <div class="label">Internal guide · Operations</div>
+  <h1>Referral intake and routing</h1>
+  <p>How to check a new referral and route it to a partner specialist</p>
+</div></div>
+
+<main class="wrap">
+
+<table class="control" aria-label="Document control">
+  <tr><th>Applies to</th><td>Referral coordinators</td></tr>
+  <tr><th>Owner</th><td>Director, LibaMed Ltd</td></tr>
+  <tr><th>Version</th><td>1.0</td></tr>
+  <tr><th>Review</th><td>Every 6 months, and whenever a new treatment corridor opens</td></tr>
+</table>
+
+<h2>Purpose</h2>
+<p>This guide explains what to check when a new referral arrives on the LibaMed platform, and how to route it to a named specialist at a partner hospital. Follow every step in order. Each check protects the patient, the referring clinician and LibaMed.</p>
+
+<h2>Before you start: three rules that always apply</h2>
+<ol>
+  <li><b>Every case starts with a UK-registered clinician.</b> Patients cannot create a referral themselves. If a patient contacts us directly, ask them to speak to their own doctor and send them the information page for clinicians.</li>
+  <li><b>Medical records stay on the platform.</b> Never download, email or print patient records. If a partner asks for documents by email, send them the secure platform link instead.</li>
+  <li><b>LibaMed never handles patient money.</b> Patients pay the partner hospital directly. We explain the quote, remind patients of payment deadlines and confirm when payments are received. We never receive, hold or refund patient funds.</li>
+</ol>
+
+<h2>Steps</h2>
+
+<div class="step"><div class="num">1</div><div>
+  <h3>Confirm the referring clinician is verified</h3>
+  <p>Open the referral from the <b>Referrals</b> queue. Check that the referrer's status shows <b>Verified</b>. Verification means their registration number has been checked against the public register (GMC for UK doctors).</p>
+  <div class="box stop"><b>Stop</b>If the referrer is not verified, do not open the case documents. Complete the clinician verification first, or contact the referrer to ask for their registration details.</div>
+</div></div>
+
+<div class="step"><div class="num">2</div><div>
+  <h3>Check the NHS pathway declaration</h3>
+  <p>LibaMed must never be used to bypass an NHS treatment pathway. The referrer must have declared one of the following:</p>
+  <ul>
+    <li>the treatment is not available on the NHS for this patient, or</li>
+    <li>the patient is already outside the NHS pathway (self-funding or privately insured).</li>
+  </ul>
+  <p>The platform blocks specialties that are routinely available on the NHS. However, read the declaration and the clinical summary together: they must tell the same story.</p>
+  <div class="box stop"><b>Stop</b>If the declaration is missing, unclear or contradicts the clinical summary, put the case on hold and ask the referrer to clarify. Do not route the case until you have a clear answer.</div>
+</div></div>
+
+<div class="step"><div class="num">3</div><div>
+  <h3>Check the patient's consent</h3>
+  <p>The patient must have agreed to each of the five consent statements separately. Check that all five show as given, with a date.</p>
+  <div class="box"><b>Note</b>A patient can withdraw consent at any time. If the case shows <b>Consent withdrawn</b>, stop all work on it and inform the referrer. The platform restricts access to the records automatically.</div>
+</div></div>
+
+<div class="step"><div class="num">4</div><div>
+  <h3>Check the documents are complete</h3>
+  <p>Partner specialists cannot review an incomplete case, and every missing document adds days to the patient's wait. Before routing, check that the referral includes:</p>
+  <ul class="check">
+    <li>clinical summary and reason for referral</li>
+    <li>histology and biopsy reports, where relevant</li>
+    <li>imaging reports, and the images themselves (DICOM format preferred)</li>
+    <li>current medication</li>
+    <li>other medical conditions</li>
+    <li>relevant family history</li>
+    <li>treatment received so far, and the patient's current treatment status</li>
+  </ul>
+  <p>If anything is missing, use <b>Request information</b> to message the referrer. Name each missing document, so they can send everything in one go.</p>
+</div></div>
+
+<div class="step"><div class="num">5</div><div>
+  <h3>Route the case to a named specialist</h3>
+  <ol>
+    <li>Check that the treatment corridor is open. Corridors marked <b>Closed</b> cannot receive cases.</li>
+    <li>Choose the partner hospital and the named specialist for the condition. Always route to a named person, never to a shared hospital inbox.</li>
+    <li>Note the partner's review timetable. For example, multidisciplinary tumour boards usually meet weekly and need complete documents a few days before the meeting.</li>
+    <li>Select <b>Route case</b>. The referrer receives an automatic confirmation.</li>
+  </ol>
+</div></div>
+
+<div class="step"><div class="num">6</div><div>
+  <h3>Follow the case through to handback</h3>
+  <ul>
+    <li><b>Treatment plan:</b> when the partner sends the plan, check it includes an itemised quote and a timeline before sharing it with the referrer and patient.</li>
+    <li><b>Payments:</b> explain the quote to the patient, remind them of deadlines and confirm payments received. The patient always pays the hospital directly.</li>
+    <li><b>Handback:</b> after treatment, make sure the referring clinician receives a structured clinical summary within 5 working days, so care continues smoothly in the UK.</li>
+  </ul>
+</div></div>
+
+<h2>When to escalate</h2>
+<table>
+  <tr><th>Situation</th><th>What to do</th></tr>
+  <tr><td>Any clinical safety concern about a case</td><td>Raise it in the clinical governance channel the same day. Do not give clinical advice yourself.</td></tr>
+  <tr><td>A possible data breach (for example, a document sent to the wrong person)</td><td>Tell the Director immediately. Some partner agreements require notification within 24 hours.</td></tr>
+  <tr><td>A patient or clinician complaint</td><td>Acknowledge it promptly and follow the LibaMed complaints procedure.</td></tr>
+  <tr><td>A partner asks for money to be paid through LibaMed</td><td>Decline politely and explain that patients pay the hospital directly. Inform the Director.</td></tr>
+</table>
+
+<footer>
+  Internal guide written for LibaMed Ltd, shared as a writing sample with partner details removed. Written by Candacé Manske ·
+  <a href="mailto:cml.manske@gmail.com">cml.manske@gmail.com</a> · <a href="../index.html">Back to portfolio</a>
+</footer>
+
+</main>
+</body>
+</html>
